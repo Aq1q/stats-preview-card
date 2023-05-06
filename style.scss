@@ -47,51 +47,116 @@ body{
             height: 100%;
             border-radius: inherit;
             background: url(./images/image-header-mobile.jpg);
-            background-size: 100%;
+            background-size: contain;
             filter: brightness(100%);
             opacity: 0.5;
         }
     }
-    .heading-container{
-        text-align: center;
+    .content-container{
         display: flex;
         flex-direction: column;
-        gap: 20px;
-        h1{
-            color: $white;
-            padding-left: 34px;
-            padding-right: 34px;
-            font-size: 2rem;
-            line-height: 1.6rem;
-            span{
-                color: $soft-violet-accent;
-            }
-        }
-        p{
-            color: $slightly-transparent-white-main-p;
-            font-size: 1rem;
-            line-height: 1.3rem;
-            padding-left: 50px;
-            padding-right: 50px;
-        }
-    }
-    .stats-container {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        text-align: center;
-        h2{
-            color: $white;
-            font-size: 2rem;
-        }
-        p{
-            color: $slightly-transparent-white-stat-headings;
-        }
-        .stat-box{
+        gap: 40px;
+        height: auto;
+        .heading-container{
+            text-align: center;
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 20px;
+            h1{
+                color: $white;
+                padding-left: 15px;
+                padding-right: 15px;
+                font-size: 1.8rem;
+                line-height: 2rem;
+                font-family: "Inter";
+                font-weight: 700;
+                span{
+                    color: $soft-violet-accent;
+                }
+            }
+            p{
+                color: $slightly-transparent-white-main-p;
+                font-size: 0.9rem;
+                line-height: 1.5rem;
+                padding-left: 40px;
+                padding-right: 40px;
+                font-family: "Inter";
+                font-weight: 400;
+            }
+        }
+        .stats-container {
+            font-family: "Lexend Deca";
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            text-align: center;
+            h2{
+                font-family: "Inter";
+                font-weight: 700;
+                color: $white;
+                font-size: 1.8rem;
+            }
+            p{
+                color: $slightly-transparent-white-stat-headings;
+                text-transform: uppercase;
+            }
+            .stat-box{
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
         }
     }
+}
 
+@media screen and (min-width: 1440px) {
+    .container{
+        width: 1110px;
+        height: 446px;
+        display: flex;
+        flex-direction: row-reverse;
+        .img-container{
+            border-radius: 0 10px 10px 0;
+            height: 100%;
+            width: 540px !important;
+            .img{
+                border-radius: inherit;
+                width: 540px;
+                background: url(./images/image-header-desktop.jpg);
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+        }
+        .content-container {
+            padding: 74px;
+            padding-top: 78px;
+            align-items: center;
+            gap: 75px;
+            .heading-container{
+                align-items: flex-start;
+                gap: 25px;
+                h1{
+                    padding-left: 0;
+                    text-align: left;
+                }
+                p{
+                    padding-left: 0;
+                    text-align: left;
+                }
+            }
+            .stats-container{
+                gap: 60px;
+                width: 100%;
+                flex-direction: row;
+                padding-left: 0;
+                text-align: left;
+                h2{
+                    font-size: 1.5rem;
+                }
+                p{
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
 }
